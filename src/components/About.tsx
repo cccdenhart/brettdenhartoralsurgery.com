@@ -1,26 +1,18 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import { default as data } from "../data.json";
+import { Jumbotron } from "react-bootstrap";
 
 export default function About() {
-    const aboutData = data["About"];
-    const pars = aboutData["body"].split("\n");
+    const aboutData = data["About"]
+    const pars: string[] = aboutData["body"].split("\n");
     return (
-        <div>
-            <br />
-            <br />
-            <br />
-            <h1>Brett C. Denhart DMD, MD</h1>
+        <div className="about">
+            <hr id="about" style={{ width: "0vh" }} />
+            <h1 style={{ marginTop: "10vh" }}>About</h1>
             <hr />
-            <div className="d-flex justify-content-around mt-5">
-                <img className="headshot" src="/headshot.png" />
-                <div style={{ width: "45%" }} >
-                    {pars.map((p) => <p>{p}</p>)}
-                </div>
-            </div>
-            <br />
-            <br />
-        </div>
+            <Jumbotron className="body">
+                {pars.map((p) => <p>{p}</p>)}
+            </Jumbotron>
+        </div >
     );
 }

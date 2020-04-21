@@ -15,8 +15,6 @@ interface Procedure {
 
 const procData = data["Procedures"];
 
-const defProc: Procedure = data["Procedures"]["default"]
-
 export default class Procedures extends React.Component<Props, State> {
     procedures: Procedure[] = procData["types"] as Procedure[];
     state: State = {
@@ -29,14 +27,13 @@ export default class Procedures extends React.Component<Props, State> {
 
     render() {
         return (
-            <div>
-                <br />
-                <br />
-                <br />
-                <h1>Our Procedures</h1>
+            <div className="procedures">
+                <hr id="procedures" style={{ width: "0vw" }} />
+                <h1 style={{ marginTop: "10vh" }}>
+                    Our Procedures
+                </h1>
                 <hr />
-                <br />
-                <div className="d-flex justify-content-around mtb-5">
+                <div className="body d-flex justify-content-around">
                     <ListGroup>
                         {this.procedures.map((p) =>
                             <ListGroup.Item
@@ -54,7 +51,6 @@ export default class Procedures extends React.Component<Props, State> {
                         <p>{this.state.proc.desc}</p>
                     </Jumbotron>
                 </div>
-                <br />
             </div>
         );
     }

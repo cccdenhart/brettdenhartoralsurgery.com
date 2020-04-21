@@ -1,26 +1,47 @@
 import React from 'react';
-import Header from "./Header";
 import Map from "./Map";
-import Canvas from "./Canvas";
 import { default as data } from "../data.json";
-import { Jumbotron } from "react-bootstrap";
+import { Carousel, Container, Row, Col } from "react-bootstrap";
+
+function Canvas() {
+    return (
+        <Row className="canvas m-0">
+            <Carousel>
+                <Carousel.Item>
+                    <img src={"/pioneer_valley.jpg"} />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src={"/winter.jpg"} />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src={"/waterfall.jpg"} />
+                </Carousel.Item>
+            </Carousel>
+            <div className="canvas-text">
+                <h1 style={{ fontSize: "3.5em" }}>
+                    Brett C. Denhart DMD, MD
+                </h1>
+                <p style={{ fontSize: "1.5em" }}>
+                    Providing Oral Maxillofacial Surgery and Dental Implants Since 2002
+                </p>
+            </div>
+        </Row>
+    );
+}
 
 export default function Home() {
     const homeData = data["Home"];
     const mission: string = homeData["mission"];
-    const pars: string[] = homeData["body"].split("\n");
     return (
-        <div>
+        <div id="home">
             <Canvas />
-            <div className="container mt-5 home-text">
-                <div className="row mb-5 home-mission">
-                    <i className="ml-5">{mission}</i>
+            <div className="body">
+                <div className="mission">
+                    <div style={{ marginLeft: "2em" }}>
+                        <p>{mission}</p>
+                    </div>
                 </div>
-                <Jumbotron className="row home-body">
-                    {pars.map((p) => <p>{p}</p>)}
-                </Jumbotron>
             </div>
-            <Map />
         </div >
     )
 }

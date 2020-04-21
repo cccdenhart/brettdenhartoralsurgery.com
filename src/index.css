@@ -7,7 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
   height: 100%;
+}
 
+body p {
+    font-size: 1em;
 }
 
 code {
@@ -16,31 +19,24 @@ code {
 }
 
 .App {
-    text-align: center;
     color: white;
-    font-size: 20px;
-}
-
-.home-text {
-    width: 60%;
-}
-
-.home-mission {
-    border-left: 5px solid white;
-    text-align: left;
-    font-size: 30px;
-}
-
-.home-body {
-    font-size: 25px;
-    background-color: rgb(85, 85, 85);
+    text-align: center;
 }
 
 .header {
-    background-color: rgba(85, 85, 85, .9);
+    background-color: rgba(85, 85, 85, .95);
     opacity: 0.5;
     color: white;
     z-index: 2;
+}
+
+.navlink {
+    color: white;
+}
+
+.navlink:hover {
+    font-weight: bold;
+    color: white;
 }
 
 .footer {
@@ -48,12 +44,25 @@ code {
     color: white;
 }
 
+hr {
+    background-color: white;
+    width: 80%;
+}
+
+#home {
+    height: 100vh;
+}
+
 .canvas {
     z-index: 1;
     position: relative;
-    text-align: center;
-    color: white;
+    height: 60vh;
+    width: 100vw;
     font-family: "Bradley Hand";
+}
+
+.canvas img {
+    width: 100vw;
 }
 
 .canvas-text {
@@ -63,38 +72,89 @@ code {
     transform: translate(-50%, -50%);
 }
 
-.canvas.h1 {
-    font-size: 70px;
+#home .body {
+    font-family: "Bradley Hand";
+    margin-top: 5vh;
+    margin-left: 20vw;
+    width: 60vw;
+    height: 40vh;
+}
+
+.mission {
+    border-left: 0.25em solid white;
+    text-align: left;
+    font-size: 2em;
+}
+
+.about {
+    height: 100vh;
+}
+
+.about .body {
+    font-size: 25px;
+    margin-top: 5vh;
+    background-color: rgb(85, 85, 85);
+    width: 50vw;
+    display: inline-block;
+}
+
+.meetus {
+    height: 100vh;
+}
+
+.meetus .body {
+    display: inline-block;
 }
 
 .headshot {
-    max-width: 35%;
-    height: auto;
+    height: 60vh;
+    width: auto;
     border: 5px solid white;
 }
 
+.procedures {
+    height: 100vh;
+}
+
+.procedures .body {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 60vh;
+}
 .proc-names {
-    background-color: rgb(112, 128, 144);
+    background-color: rgb(85, 85, 85);;
     color: white;
 }
 
 .proc-text {
-    background-color: rgb(112, 128, 144);
-    width: 50%;
+    background-color: rgb(85, 85, 85);
+    width: 50vw;
     color: white;
 }
 
+.contactus {
+    height: 100vh;
+}
+
+.contactus .body {
+    margin-top: 5vh;
+    margin-left: 10vw;
+    width: 80vw;
+    height: 60vh;
+    text-align: center;
+}
+
 .contact-map {
-    width: 40%;
+    width: 50vw;
     border: 5px solid white;
 }
 
-.contact-text {
-    top: 50%;
+.contact-title {
+    text-align: right;
 }
 
-hr {
-    background-color: white;
-    width: 80%;
+.contact-text {
+    margin-top: 20vh;
+    width: 50vw;
 }
 
