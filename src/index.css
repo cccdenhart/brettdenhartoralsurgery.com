@@ -14,3 +14,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.home-text {
+    width: 60%;
+}
+
+.home-mission {
+    border-left: 5px solid white;
+    text-align: left;
+    font-size: 30px;
+}
+
+.home-body {
+    font-size: 25px;
+    background-color: rgb(85, 85, 85);
+}
+
+.header {
+    background-color: rgba(85, 85, 85, .9);
+    opacity: 0.5;
+    color: white;
+    z-index: 2;
+}
+
+.footer {
+    background-color: rgba(112, 128, 144, .6);
+    color: white;
+}
+
+.canvas {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Bradley Hand";
+}
+
+.canvas-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.canvas.h1 {
+    font-size: 70px;
+}
+
+.headshot {
+    max-width: 35%;
+    height: auto;
+    border: 5px solid white;
+}
+
+.proc-names {
+    background-color: rgb(112, 128, 144);
+    color: white;
+}
+
+.proc-text {
+    background-color: rgb(112, 128, 144);
+    width: 50%;
+    color: white;
+}
+
+.contact-map {
+    width: 40%;
+    border: 5px solid white;
+}
+
+.contact-text {
+    top: 50%;
+}
+
+hr {
+    background-color: white;
+    width: 80%;
+}
+

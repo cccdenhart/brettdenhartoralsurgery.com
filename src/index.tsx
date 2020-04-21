@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import './App.css';
 import Home from "./components/Home";
 import Header from "./components/Header"
 import Footer from "./components/Footer";
