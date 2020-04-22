@@ -1,11 +1,15 @@
 import React from "react";
 import { default as data } from "../data.json";
-import { ListGroup, Jumbotron } from "react-bootstrap";
+import { ListGroup, Jumbotron, Container, Row, Col } from "react-bootstrap";
 
 interface Props { };
 
 interface State {
     proc: Procedure
+};
+
+interface DescProps {
+    desc: string;
 };
 
 interface Procedure {
@@ -14,6 +18,18 @@ interface Procedure {
 };
 
 const procData = data["Procedures"];
+
+function ProcessDesc(props: DescProps) {
+    const splits: string[] = props.desc.split("\n");
+    return (
+        <div>
+            {
+                splits.map((p: string) =>
+                    <p>{p}</p>)
+            }
+        </div>
+    );
+}
 
 export default class Procedures extends React.Component<Props, State> {
     procedures: Procedure[] = procData["types"] as Procedure[];
@@ -27,31 +43,40 @@ export default class Procedures extends React.Component<Props, State> {
 
     render() {
         return (
-            <div className="procedures">
-                <hr id="procedures" style={{ width: "0vw" }} />
-                <h1 style={{ marginTop: "10vh" }}>
-                    Our Procedures
-                </h1>
-                <hr />
-                <div className="body d-flex justify-content-around">
-                    <ListGroup>
-                        {this.procedures.map((p) =>
-                            <ListGroup.Item
-                                action
-                                className="proc-names"
-                                onClick={() => this.updateProc(p)}
-                            >
-                                {p.name}
-                            </ListGroup.Item>
-                        )}
-                    </ListGroup>
-                    <Jumbotron className="proc-text">
-                        <h2>{this.state.proc.name}</h2>
-                        <br />
-                        <p>{this.state.proc.desc}</p>
-                    </Jumbotron>
-                </div>
-            </div>
+            <section id="procedures">
+                <Container>
+                    <Row>
+                        <Col>
+                            <h1 style={{ marginTop: "10vh" }}>
+                                Our Procedures
+                            </h1>
+                            <hr />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col sm="4">
+                            <ListGroup>
+                                {this.procedures.map((p) =>
+                                    <ListGroup.Item
+                                        action
+                                        className="proc-names"
+                                        onClick={() => this.updateProc(p)}
+                                    >
+                                        {p.name}
+                                    </ListGroup.Item>
+                                )}
+                            </ListGroup>
+                        </Col>
+                        <Col sm="8">
+                            <Jumbotron className="proc-text mt-5">
+                                <h2>{this.state.proc.name}</h2>
+                                <br />
+                                <ProcessDesc desc={this.state.proc.desc} />
+                            </Jumbotron>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
         );
     }
 }

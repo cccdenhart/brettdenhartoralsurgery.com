@@ -6,17 +6,27 @@ import Procedures from "./Procedures";
 import Contact from "./Contact";
 import { Nav, Navbar } from "react-bootstrap";
 import { default as data } from "../data.json";
+import { Link } from "react-scroll";
 
 export function Header() {
     const pages: string[] = Object.keys(data);
     return (
-        <Navbar fixed="top" className="header" expand="lg">
+        <Navbar variant="dark" fixed="top" className="header" expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-around">
-                {pages.map((p) =>
-                    <Nav.Link href={"#" + p.toLowerCase().replace(/\s/g, '')}
-                        className="navlink"> {p}</Nav.Link>)
-                }
+            <Navbar.Collapse id="basic-navbar-nav" >
+                <Nav className="nav-body m-auto">
+                    {pages.map((p) =>
+                        <Nav.Item><Nav.Link><Link
+                            to={p.toLowerCase().replace(/\s/g, '')}
+                            activeClass="active"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                        >
+                            {p}
+                        </Link></Nav.Link></Nav.Item>)
+                    }
+                </Nav>
             </Navbar.Collapse>
         </Navbar >
     );

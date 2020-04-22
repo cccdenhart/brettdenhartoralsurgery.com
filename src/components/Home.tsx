@@ -33,7 +33,7 @@ export default function Home() {
     const homeData = data["Home"];
     const mission: string = homeData["mission"];
     return (
-        <div id="home">
+        <section id="home">
             <Canvas />
             <div className="body">
                 <div className="mission">
@@ -42,6 +42,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </div >
+        </section>
     )
 }

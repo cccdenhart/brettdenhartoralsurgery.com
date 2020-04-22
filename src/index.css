@@ -23,6 +23,8 @@ code {
     text-align: center;
 }
 
+
+/* --- MAIN --- */
 .header {
     background-color: rgba(85, 85, 85, .95);
     opacity: 0.5;
@@ -46,9 +48,10 @@ code {
 
 hr {
     background-color: white;
-    width: 80%;
+    width: 80vw;
 }
 
+/* --- HOME --- */
 #home {
     height: 100vh;
 }
@@ -58,7 +61,6 @@ hr {
     position: relative;
     height: 60vh;
     width: 100vw;
-    font-family: "Bradley Hand";
 }
 
 .canvas img {
@@ -73,7 +75,6 @@ hr {
 }
 
 #home .body {
-    font-family: "Bradley Hand";
     margin-top: 5vh;
     margin-left: 20vw;
     width: 60vw;
@@ -86,11 +87,12 @@ hr {
     font-size: 2em;
 }
 
-.about {
+/* --- ABOUT --- */
+#about {
     height: 100vh;
 }
 
-.about .body {
+#about .body {
     font-size: 25px;
     margin-top: 5vh;
     background-color: rgb(85, 85, 85);
@@ -98,12 +100,13 @@ hr {
     display: inline-block;
 }
 
-.meetus {
+/* --- MEET US --- */
+#meetus {
     height: 100vh;
 }
 
-.meetus .body {
-    display: inline-block;
+.modal-backdrop {
+    background-color: rgb(85, 85, 85);
 }
 
 .headshot {
@@ -112,6 +115,7 @@ hr {
     border: 5px solid white;
 }
 
+/* --- PROCEDURES --- */
 .procedures {
     height: 100vh;
 }
@@ -132,29 +136,14 @@ hr {
     color: white;
 }
 
-.contactus {
-    height: 100vh;
-}
 
-.contactus .body {
-    margin-top: 5vh;
-    margin-left: 10vw;
-    width: 80vw;
-    height: 60vh;
-    text-align: center;
+/* --- CONTACT US --- */
+#contactus {
+    height: 100vh;
 }
 
 .contact-map {
     width: 50vw;
+    height: 60vh;
     border: 5px solid white;
 }
-
-.contact-title {
-    text-align: right;
-}
-
-.contact-text {
-    margin-top: 20vh;
-    width: 50vw;
-}
-
