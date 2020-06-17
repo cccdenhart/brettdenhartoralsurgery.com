@@ -56,7 +56,7 @@ export default class Map1 extends Component<Props, State> {
 
     render() {
         const { viewport } = this.state;
-        const TOKEN = process.env.REACT_APP_MAPBOX as string;
+        const TOKEN = "pk.eyJ1IjoiY2NjZGVuaGFydCIsImEiOiJja2JpbmRsaHEwZWg3MnNuY2x3emRjMjlqIn0.WboFvPx3QcT9kSifRexnaw";
         return (
             <ReactMapGL
                 {...viewport}
