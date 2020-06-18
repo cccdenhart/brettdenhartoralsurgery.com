@@ -1,4 +1,5 @@
 import React from "react";
+import { Component } from "react";
 import Home from "./Home";
 import About from "./About";
 import Meet from "./Meet";
@@ -53,15 +54,55 @@ export function Footer() {
     );
 }
 
-export function Main() {
-    return (
-        <div>
-            <Home />
-            <About />
-            <Meet />
-            <Procedures />
-            <Contact />
-        </div>
-    );
+interface Props { };
+
+interface State {
+    page_idx: number
+};
+
+export class Main extends Component<Props, State> {
+    pages: JSX.Element[] = [
+        <Home />,
+        <About />,
+        <Meet />,
+        <Procedures />,
+        <Contact />
+    ];
+
+    state: State = {
+        page_idx: 0
+    }
+
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.switchPage);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.switchPage);
+    }
+
+    switchPage = () => {
+        const scroll: number = window.scrollY;
+        console.log(scroll);
+        const choosePage = (scroll: number, idx: number): number => {
+            if ((idx === 0 && scroll < 0) ||
+                (idx === (this.pages.length - 1))) {
+                return idx;
+            }
+            return idx + ((scroll > 0) ? 1 : (-1));
+        }
+        this.setState((state: State) => ({
+            page_idx: choosePage(scroll, state.page_idx)
+        }));
+    }
+
+    render() {
+        return (
+            <div>
+                {this.pages[this.state.page_idx]}
+            </div>
+        );
+    }
 }
 

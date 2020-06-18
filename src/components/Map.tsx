@@ -41,7 +41,7 @@ interface State {
 const LAT: number = 42.17212;
 const LONG: number = -72.58973;
 
-export default class Map1 extends Component<Props, State> {
+export default class Map extends Component<Props, State> {
     state: State = {
         viewport: {
             latitude: LAT,
