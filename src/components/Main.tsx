@@ -73,34 +73,10 @@ export class Main extends Component<Props, State> {
         page_idx: 0
     }
 
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.switchPage);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.switchPage);
-    }
-
-    switchPage = () => {
-        const scroll: number = window.scrollY;
-        console.log(scroll);
-        const choosePage = (scroll: number, idx: number): number => {
-            if ((idx === 0 && scroll < 0) ||
-                (idx === (this.pages.length - 1))) {
-                return idx;
-            }
-            return idx + ((scroll > 0) ? 1 : (-1));
-        }
-        this.setState((state: State) => ({
-            page_idx: choosePage(scroll, state.page_idx)
-        }));
-    }
-
     render() {
         return (
             <div>
-                {this.pages[this.state.page_idx]}
+                {this.pages.map((_) => _)}
             </div>
         );
     }
