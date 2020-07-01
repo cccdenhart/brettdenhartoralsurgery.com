@@ -1,5 +1,5 @@
 import React from "react";
-import Map from "./Map";
+import { Map } from "./Map";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function Contact() {
@@ -14,7 +14,9 @@ export default function Contact() {
                 </Row>
                 <Row style={{ marginTop: "5vh" }}>
                     <Col sm="8">
-                        <div className="contact-map"><Map /></div>
+                        <div className="contact-map">
+                            <Map />
+                        </div>
                     </Col>
                     <Col sm="4">
                         <div style={{ marginTop: "30%" }}

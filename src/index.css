@@ -147,3 +147,13 @@ hr {
     height: 60vh;
     border: 5px solid white;
 }
+
+/* --- MAP --- */
+#mapContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%
+}

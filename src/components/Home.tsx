@@ -1,5 +1,4 @@
 import React from 'react';
-import Map from "./Map";
 import { default as data } from "../data.json";
 import { Carousel, Container, Row, Col } from "react-bootstrap";
 
