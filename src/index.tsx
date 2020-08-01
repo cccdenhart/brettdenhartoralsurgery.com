@@ -6,6 +6,11 @@ import './index.css';
 import { Main, Header, Footer } from "./components/Main";
 import Mobile from "./components/Mobile";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+
+
+Amplify.configure(awsconfig)
 
 
 interface appProps {
