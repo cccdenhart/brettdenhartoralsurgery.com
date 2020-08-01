@@ -7,7 +7,7 @@ export default function About() {
     const pars: string[] = aboutData["body"].split("\n");
     return (
         <section id="about">
-            <Container>
+            <Container style={{ width: "80%" }}>
                 <Row>
                     <Col>
                         <h1 style={{ marginTop: "10vh" }}>About</h1>

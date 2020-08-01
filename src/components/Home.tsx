@@ -3,6 +3,24 @@ import Map from "./Map";
 import { default as data } from "../data.json";
 import { Carousel, Container, Row, Col } from "react-bootstrap";
 
+
+interface titleProps {
+    fontSize: string
+}
+
+export function Title(props: titleProps) {
+    return (
+        <div>
+            <h1 style={{ fontSize: props.fontSize }}>
+                Brett C. Denhart DMD, MD
+            </h1>
+            <p style={{ fontSize: "1.5em" }}>
+                Providing Oral Maxillofacial Surgery and Dental Implants Since 2002
+            </p>
+        </div>
+    )
+}
+
 function Canvas() {
     return (
         <Row className="canvas m-0">
@@ -17,14 +35,7 @@ function Canvas() {
                     <img src={"/waterfall.jpg"} />
                 </Carousel.Item>
             </Carousel>
-            <div className="canvas-text">
-                <h1 style={{ fontSize: "3.5em" }}>
-                    Brett C. Denhart DMD, MD
-                </h1>
-                <p style={{ fontSize: "1.5em" }}>
-                    Providing Oral Maxillofacial Surgery and Dental Implants Since 2002
-                </p>
-            </div>
+            <div className="canvas-text"><Title fontSize="3.5em" /></div>
         </Row>
     );
 }
