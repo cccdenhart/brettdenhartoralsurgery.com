@@ -26,13 +26,13 @@ function Canvas() {
         <Row className="canvas m-0">
             <Carousel>
                 <Carousel.Item>
-                    <img src={"/pioneer_valley.jpg"} />
+                    <img src={"/images/pioneer_valley.jpg"} />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src={"/winter.jpg"} />
+                    <img src={"/images/winter.jpg"} />
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img src={"/waterfall.jpg"} />
+                    <img src={"/images/waterfall.jpg"} />
                 </Carousel.Item>
             </Carousel>
             <div className="canvas-text"><Title fontSize="3.5em" /></div>

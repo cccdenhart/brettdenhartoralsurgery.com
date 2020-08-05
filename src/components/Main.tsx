@@ -12,7 +12,13 @@ import { Link } from "react-scroll";
 export function Header() {
     const pages: string[] = Object.keys(data);
     return (
-        <Navbar variant="dark" fixed="top" className="header" expand="lg">
+        <Navbar
+            variant="dark"
+            fixed="top"
+            className="header"
+            expand="lg"
+            style={{ fontSize: "24px", fontWeight: "bold" }}
+        >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="nav-body m-auto">

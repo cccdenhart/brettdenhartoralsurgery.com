@@ -18,7 +18,7 @@ export default function About() {
                 </Row>
                 <Row className="mt-5">
                     <Col sm="6">
-                        <img className="headshot" src="/headshot.png" />
+                        <img className="headshot" src="/images/headshot.png" />
                     </Col>
                     <Col sm="6" style={{ height: "60vh" }}>
                         {pars.map((p) => <p>{p}</p>)}
