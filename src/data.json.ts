@@ -24,7 +24,7 @@ export default {
             },
             {
                 "name": "Orthognathic Surgery",
-                "desc": "Orthognathic surgery is done to correct misalignments or other abnormalities in the upper and/or lower jaw.\nOrthognathic surgery can involve procedures such as an osteotomy(bone cutting), bone grafts, or distraction osteogenesis(stretching of the bone) and orthodontic(braces) care.Orthognathic correction is conducted in stages, and the course of treatment can last from a few months to a year or more.\nIn order to perform the procedure successfully, the jawbones will be repositioned in accordance with one’s specific needs.Inconspicuous incisions are usually made inside, and if needed, outside the mouth to allow for surgical plates, screws, wires and rubber bands to be used to hold your jaws in their new positions."
+                "desc": "Orthognathic surgery is done to correct misalignments or other abnormalities in the upper and/or lower jaw.\nOrthognathic surgery can involve procedures such as an osteotomy (bone cutting), bone grafts, or distraction osteogenes is (stretching of the bone) and orthodontic (braces) care.Orthognathic correction is conducted in stages, and the course of treatment can last from a few months to a year or more.\nIn order to perform the procedure successfully, the jawbones will be repositioned in accordance with one’s specific needs.Inconspicuous incisions are usually made inside, and if needed, outside the mouth to allow for surgical plates, screws, wires and rubber bands to be used to hold your jaws in their new positions."
             },
             {
                 "name": "Facial Trauma",
