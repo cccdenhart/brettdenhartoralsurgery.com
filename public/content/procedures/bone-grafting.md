@@ -1,0 +1,1 @@
+Bone grafting is the replacement or enhancement of bone around teeth. When a tooth is lost, the surrounding bone collapses. Bone grafting is performed to reverse bone loss or enhance existing bone. The grafting material can be taken from parts of the body or from synthetic material. Bone grafting allows for proper support of dental implants or prostheses.
