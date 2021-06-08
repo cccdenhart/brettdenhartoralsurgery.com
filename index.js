@@ -1,17 +1,23 @@
-$(() => {
-    console.log('FIRST');
-    $("#nav a").click(function(e){
+const load_data = async () => {
+    const data = await fetch("data.json").then(response => response.json());
+    return data;
+}
+
+const add_procedures = async () => {
+    const data = await load_data();
+    console.log('adding procedures')
+    const procedures = data['Procedures']['types'];
+    $('#procedure-names').append(procedures.map((p) => ('<li class="list-group-item">' + p['name'] + '</li>')));
+}
+
+$(document).ready(async () => {
+
+    $("#nav a").click((e) => {
         e.preventDefault();
         $('html, body').scrollTo(this.hash,this.hash); 
     });
 
-    console.log("SECOND")
-    $.getJSON("./data.json", (data) => {  
-        console.log('HERE');
-        const procedures = data['procedures'];
-        $('#procedure-names').append(procedures.map((p) => ('<li class="list-group-item">' + p + '</li>')));
-    });
-
+    add_procedures();
 });
 
 let map = new mapboxgl.Map({
