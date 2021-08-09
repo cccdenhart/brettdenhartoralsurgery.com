@@ -31,7 +31,7 @@ $(document).ready(async () => {
 
     $("#nav a").click((e) => {
         e.preventDefault();
-        $('html, body').scrollTo(this.hash,this.hash); 
+        $('html, body').scrollTo(this.hash, this.hash); 
     });
 
     add_procedures();
