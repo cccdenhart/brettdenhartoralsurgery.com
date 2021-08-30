@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #282c34;
+    height: 100%;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+body p {
+    font-size: 1em;
+}
+
+#home {
+    color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* --- MAIN --- */
+.header {
+    background-color: rgba(85, 85, 85, .95);
+    opacity: 0.5;
+    color: white;
+    z-index: 2;
+}
+
+.navlink {
+    color: white;
+}
+
+.navlink:hover {
+    font-weight: bold;
+    color: white;
+}
+
+.footer {
+    background-color: rgba(112, 128, 144, .6);
+    color: white;
+}
+
+hr {
+    background-color: white;
+    width: 80vw;
+}
+
+/* --- HOME --- */
+#home {
+    height: 100vh;
+}
+
+.canvas {
+    z-index: 1;
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+}
+
+.canvas img {
+    width: 100vw;
+}
+
+.canvas-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#home .body {
+    margin-top: 5vh;
+    margin-left: 20vw;
+    width: 60vw;
+    height: 40vh;
+}
+
+.mission {
+    border-left: 0.25em solid white;
+    text-align: left;
+    font-size: 2em;
+}
+
+/* --- ABOUT --- */
+#about {
+    height: 100vh;
+}
+
+#about .body {
+    font-size: 25px;
+    margin-top: 5vh;
+    background-color: rgb(85, 85, 85);
+    width: 50vw;
+    display: inline-block;
+}
+
+/* --- MEET US --- */
+#meetus {
+    height: 100vh;
+}
+
+.modal-backdrop {
+    background-color: rgb(85, 85, 85);
+}
+
+.headshot {
+    height: 60vh;
+    width: auto;
+    border: 5px solid white;
+}
+
+/* --- PROCEDURES --- */
+.procedures {
+    height: 100vh;
+}
+
+.procedures .body {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 60vh;
+}
+.proc-names {
+    background-color: rgb(85, 85, 85);;
+    color: white;
+}
+
+.proc-text {
+    background-color: rgb(85, 85, 85);
+    width: 50vw;
+    color: white;
+    white-space: pre-wrap;
+}
+
+
+/* --- CONTACT US --- */
+#contactus {
+    height: 100vh;
+}
+
+.contact-map {
+    width: 50vw;
+    height: 60vh;
+    border: 5px solid white;
+}
