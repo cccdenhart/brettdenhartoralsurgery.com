@@ -451,7 +451,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 90vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/lake.jpg") top center;
   background-size: cover;
   margin-bottom: -200px;
 }
@@ -466,11 +466,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #2c4964;
+  color: #fff;
 }
 
 #hero h2 {
-  color: #2c4964;
+  color: #fff;
   margin: 10px 0 0 0;
   font-size: 24px;
 }
@@ -1139,6 +1139,10 @@ section {
   margin-bottom: 0;
 }
 
+.departments .tab-content p {
+  white-space: pre-line;
+}
+
 @media (max-width: 992px) {
   .departments .nav-link {
     border: 0;
@@ -1166,7 +1170,7 @@ section {
 
 .doctors .member .pic {
   overflow: hidden;
-  width: 180px;
+  width: 1000px;
   border-radius: 50%;
 }
 
